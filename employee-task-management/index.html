@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Task Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Employee Task Management System</h1>
+    <p>Simple web application for managing employees and tasks</p>
+  </header>
+  <main class="container">
+    <section class="stats">
+      <div class="card"><span>Total Tasks</span><strong id="totalTasks">0</strong></div>
+      <div class="card"><span>Pending</span><strong id="pendingTasks">0</strong></div>
+      <div class="card"><span>In Progress</span><strong id="progressTasks">0</strong></div>
+      <div class="card"><span>Completed</span><strong id="completedTasks">0</strong></div>
+    </section>
+    <section class="panel">
+      <h2>Add Employee</h2>
+      <form id="employeeForm">
+        <input id="employeeName" type="text" placeholder="Employee name" required>
+        <input id="employeeEmail" type="email" placeholder="Email" required>
+        <input id="employeeDepartment" type="text" placeholder="Department" required>
+        <button type="submit">Add Employee</button>
+      </form>
+    </section>
+    <section class="panel">
+      <h2>Add Task</h2>
+      <form id="taskForm">
+        <input id="taskTitle" type="text" placeholder="Task title" required>
+        <input id="taskDescription" type="text" placeholder="Task description" required>
+        <select id="taskEmployee" required></select>
+        <select id="taskPriority"><option>Low</option><option selected>Medium</option><option>High</option></select>
+        <select id="taskStatus"><option selected>Pending</option><option>In Progress</option><option>Completed</option></select>
+        <button type="submit">Create Task</button>
+      </form>
+    </section>
+    <section class="panel">
+      <div class="toolbar">
+        <h2>Tasks</h2>
+        <input id="searchInput" type="text" placeholder="Search tasks...">
+        <select id="filterStatus"><option value="All">All</option><option>Pending</option><option>In Progress</option><option>Completed</option></select>
+      </div>
+      <div id="taskList"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
