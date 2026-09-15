@@ -1,6 +1,0 @@
-Scrapy
-beautifulsoup4
-requests
-selenium
-pandas
-python-dotenv
